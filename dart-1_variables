@@ -1,0 +1,48 @@
+//Single line comment
+
+/*
+ * multilines comment
+ * 
+*/
+
+//for multi statements
+void main() {//does not return anything
+  
+  print('hello world!');
+  
+  //give me freedom to assign a value (string, integer, boolean, etc.) and can be used later with any type
+  dynamic v = 10;
+  
+  //if it is embeddd with string, must be coverted to string
+  print("value " + v.toString());  
+  
+  //dollar sign executes variable or function after it
+  print('value $v');
+  print('hello $hello');
+  
+  v = 'motasem';//reused with another type
+  print('hello $v');
+  
+  print(v.runtimeType);//type of given value
+  print('type of variable is ${v.runtimeType}');//must be in brackets with $
+  
+  //give me freedom to assign a value as dynamic but cannot be used with another type
+  var val = 'hello';
+  //i can reuse it only with the same type i assigned
+  val = 'motasem';
+  
+  int v1 = 10;//restricted with integer value
+  double v2 = 10;//restrcted with double value
+  num v3 = 10;//either integer or double
+  
+  String v4 = 'world';
+  
+  var k = null;//can take null  
+  const num v5 = 5; //must take vlaue, cannot take null
+  
+}
+
+void hello() => print('hello');
+
+//FatArrow function for one statement
+//void main() => print('hello world!');//clean code
