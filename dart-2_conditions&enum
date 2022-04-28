@@ -1,0 +1,101 @@
+void main() {
+  Day today = Day.Wednesday;
+  print('today is ${today.name}');//Wednesday
+  
+  /*
+   * if statement is first condition 
+   * else if statement (optional) is middle condition executes when pevious condition was not achieved 
+   * else statement (optional) is the last excutes if all conditions where not achieved
+   * 
+   * logical operators used in conditions
+   * and (&&) two conditions must be achieved, 
+   * or (||) any condition nust be achieved, 
+   * not (!) reverse condition
+   * 
+   * relational operators used in conditions 
+   * <, >, <=, >=, ==
+  */
+  
+  int age = 22;
+  
+  if (age >= 20 && age < 30)
+    print('can marry');
+  else if (age > 30)
+    print('should be married');
+  
+  
+  
+  
+  /*
+   * switch conditions as if in another semantics
+   * switch(which sould be cheched)
+   * contains from cases and default
+   * must use break, continue, throw, or rethrow between cases, except if we use cases as (or ||)
+   * break to exit switch 
+   * continue to move another case
+   * 
+   * cannot use double in switch (error) even if we use (num variable)
+  */
+  
+  String char = 'M';
+  
+  switch(char){
+      //use cases as (or)
+    case 'M':
+      //if (char == 'M' || char == 'm')
+    case 'm':
+      print('hello');
+      continue Gender;
+      
+    case 'F':
+      print('female');
+      break;
+     
+    Gender://واسطة
+    //executes without achieving this cases
+    case 'Male':
+    case 'male':
+      print('male');
+      break;
+    
+    default://else (optional)
+      print('hello world!');
+       
+      
+  }
+  
+  var passed = true;
+  String status = '';
+  
+  if (passed)
+    status = 'happy';
+  else 
+    status = 'pad';
+  
+  
+  switch(passed){
+    case true:
+      continue prize;
+    
+    case false:
+      continue hit;
+    
+    prize:
+    case true:
+      status = 'happy';
+      break;
+    
+    hit:
+    case true:
+      status = 'pad';
+      break;
+  }
+  
+  //short-if (ternary operator) enstead of if-else statement
+  status = passed? 'happy': 'pad';
+  
+}
+
+enum Day{//enumeration لاتعامل معاملة السترنق أو انتجر و تكتب على هيئة متغير وهي تحصر مجموعة قيم لتجنب التكرار
+  Saturday, Sunday, Monday, Tuesday, Wednesday, Thursday, Friday
+}
