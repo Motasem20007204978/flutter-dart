@@ -2,8 +2,7 @@ void main(){
   
   /*
    *Assignment operators:
-      +=, -=, *=, /=
-      used to affect on the same value
+      +=, -=, *=, /=  used to affect on the same value
    */
   
   int a = 10;
