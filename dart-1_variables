@@ -38,7 +38,53 @@ void main() {//does not return anything
   String v4 = 'world';
   
   var k = null;//can take null  
-  const num v5 = 5; //must take vlaue, cannot take null
+  dynamic d = null;//can take null 
+  const num v5 = 5; //constant variable must take vlaue, cannot be null safety
+  
+  
+  // operators
+
+  int a = 4; //in this format, it must take a value
+  int b = 10;
+  print(a + b);
+  print(b / a); //double 2.5
+  print(b ~/ a); // casting the result with int, means it is 2
+  print(b % a);
+  a++; // a = a+1
+  b--; // b = b-1
+  print("$a, $b"); // as f'{a}, {b}' in python
+  // ignore: unnecessary_type_check
+  print(a is int); //true
+  print(b > a);
+  print(b is! double); // is not
+  print(!(a > 5 && b < 10)); //not(a>5 and b<10)
+
+
+//variabes with null safety
+
+  String? n;
+  //n.length //null safety explores error before run
+
+  //n!.length //error, null على مسؤوليتي مش
+  //the error appears after run
+
+  int? c; //null value
+  //c!.abs();//error, على مسؤوليتي الها قيمة
+  print(c);
+  c ??= 4; //if c is null, then assign value
+  print(c); // 4
+
+//variables that takes value later
+
+  late int m; // it takes a value later
+  //print("m is $m"); if we want call it, we must assign a value
+
+  /*
+  difference between 'late' and '?':
+    if we want call variable with 'late', we must assign a value
+    not necessary to assign value if we call variable with '?' and stays null
+  */
+
   
 }
 
