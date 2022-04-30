@@ -1,0 +1,59 @@
+void main(){
+  
+  /*
+   *Assignment operators:
+      +=, -=, *=, /=
+      used to affect on the same value
+   */
+  
+  int a = 10;
+  int b = 5;
+  a += b;//add b to the the value a and restore it
+  
+  //in for loop if we want to print even numbers
+  for(int i=0; i < 20; i += 2)
+    print('$i');
+  
+  int i = 0;
+  while(i < a){
+    i++;//i += 1
+    if(i == 5)
+      continue;
+    print(i);
+  } 
+  
+  /**
+   * Array stores a group of values in a variable
+   *  it can be dynamic, integer, string, boolean, etc.
+   *  length = 5
+   *  arrangement: 0 -> 5 
+   */
+  
+  //dynamic array
+  List arr = ['motasem', 22, 'palestinian'];//dynamic size and values
+  
+  //String array
+  
+  //List<String> names = [];// not used
+  List<String> names = <String>[];//empty, dynamic size
+  
+  names = <String>['motasem'];//one element
+  print(names.single);
+  
+  names = <String>['motasem', 'anwar', 'almobayyed'];
+  final reverseOrder = names.reversed;//iterable, not list
+  print(reverseOrder.toList());
+  
+  //print(names.single);//if has one element print it, otherwise throw error
+  names.length;//length of the array
+  names.first;//first element
+  names[0];//first element
+  names.elementAt(2);//third element
+  names.last;//last element
+  
+  
+  //filled array
+  List<String> n = List.filled(15, 'motasem');//fixed size array
+  List<int> m = List.filled(12/*length*/, 5/*value will fill all indexes*/, growable: true/*able to increase or decrease*/);  
+  
+}
